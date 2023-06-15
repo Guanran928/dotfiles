@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# fuck this is so dumb
+
+export XPOS=$(echo $(hyprctl cursorpos) | awk '{print $1}')
+export YPOS=$(((1080-"$(echo $(hyprctl cursorpos) | awk '{print $2}')")))
+
+# echo $XPOS $YPOS
+
+pkill mpvpaper
+swww img --transition-type grow --transition-pos "$XPOS $YPOS" --transition-fps 60 --transition-duration 1 "$1"

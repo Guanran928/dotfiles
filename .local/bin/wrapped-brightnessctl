@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Original Script: https://github.com/ericmurphyxyz/dotfiles/blob/master/.local/bin/changebrightness
+
+send_notification() {
+  brightness=$((($(brightnessctl get) / 1200)))
+	dunstify -a "changebrightness" -u low -r 9991 -h int:value:"$brightness" -i "brightness-$1" "Brightness: $brightness%" -t 2000
+}
+
+case $1 in
+up)
+	brightnessctl set +5%
+	send_notification "$1"
+	;;
+down)
+	brightnessctl set 5%-
+	send_notification "$1"
+	;;
+esac
