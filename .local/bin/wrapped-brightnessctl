@@ -3,7 +3,7 @@
 # Original Script: https://github.com/ericmurphyxyz/dotfiles/blob/master/.local/bin/changebrightness
 
 send_notification() {
-  brightness=$((($(brightnessctl get) / 1200)))
+  brightness=$((($(brightnessctl get) / 240)))
 	dunstify -a "changebrightness" -u low -r 9991 -h int:value:"$brightness" -i "brightness-$1" "Brightness: $brightness%" -t 2000
 }
 

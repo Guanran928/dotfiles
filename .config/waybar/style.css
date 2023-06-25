@@ -1,12 +1,16 @@
-/* based on https://gitlab.com/fazzi/dotfiles */
-/* made for `waybar-hyprland`, do not use with vanilla `waybar` */
-
-/* @import "mocha.css"; */
+/*
+ * Waybar styles config
+ * ~/.config/waybar/style.css
+ * based on https://gitlab.com/fazzi/dotfiles  
+ * made for `waybar-hyprland`
+ * yes i have no knowledge about css
+ *
+ */
 
 * {
-  font-family: Torus, JetBrainsMono Nerd Font Propo; /* set font, propo nerd font for centered icons, symbols nerd font does not work great */
+  font-family: JetBrainsMono Nerd Font Propo; /* set font, propo nerd font for centered icons, symbols nerd font does not work great */
   font-weight: bold; /* set bold font */
-  font-size: 15px;
+  font-size: 14px; /* set font size */
   color: #c0caf5 /* set global text color */
 }
 
@@ -27,7 +31,8 @@ tooltip { /* custom font stopped working for some reason...? */
 #tray,
 #pulseaudio,
 #battery,
-#clock {
+#clock,
+#cava {
   background: #15161e; /* pill background color */
   margin: 10px 4px 4px 4px; /* empty spaces around pill */
   padding: 4px 10px; /* extend pill size, vertical then horizontal */

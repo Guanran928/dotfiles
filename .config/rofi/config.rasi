@@ -1,7 +1,10 @@
 /* 
-Stolen from https://github.com/Sinomor/dots/tree/main/.config/bspwm/rofi
-Really clean and cozy dotfiles btw, liked it :D
-*/
+ * Rofi config file
+ * ~/.config/rofi/config.rasi
+ *
+ * Modified from https://github.com/Sinomor/dots/tree/main/.config/bspwm/rofi
+ * Really clean and cozy dotfiles btw, liked it :D
+ */
 
 configuration {
 	display-drun: ">";
@@ -13,7 +16,7 @@ configuration {
 @import "~/.config/rofi/colors.rasi"
 
 * {
-	font: "Torus SemiBold 14";
+	font: "JetBrainsMono Nerd Font SemiBold 14";
 	separatorcolor: transparent;
 	border: 0;
 	margin: 0;
@@ -56,7 +59,7 @@ prompt {
 	text-color: @fg;
 	enabled: true;
 	border-radius: 0;
-	padding: 2 10 0 10;
+	padding: 4 10 0 10;
 }
 
 entry {

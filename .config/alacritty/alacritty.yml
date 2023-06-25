@@ -1,26 +1,37 @@
+#
+# Alacritty config
+# ~/.config/alacritty/alacritty.yml
+#
+
 font:
   size: 12
   normal:
     family: JetBrainsMono Nerd Font
-    style: Regular
+    style: SemiBold
   bold:
     family: JetBrainsMono Nerd Font    
     style: Bold
   italic:
     family: JetBrainsMono Nerd Font    
     style: Italic
-  bold_{i}talic:
+  bold_italic:
     family: JetBrainsMono Nerd Font    
     style: Bold Italic
 
 window:
-  opacity: 0.8
+  #opacity: 0.85
   padding:
-    x: 40
-    y: 40
+    x: 16
+    y: 16
     dynamic_padding: true
 cursor:
   style: beam
+
+env:
+  WINIT_X11_SCALE_FACTOR: "1"
+
+shell:
+  program: /usr/bin/fish
 
 import:
   # uncomment the flavour you want below:

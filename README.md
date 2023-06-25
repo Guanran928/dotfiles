@@ -11,12 +11,12 @@ infomations:
 - wallpaper: [swww](https://github.com/Horus645/swww)
 - notif: [dunst](https://github.com/dunst-project/dunst)
 - launcher: [rofi-iboon-wayland](https://github.com/lbonn/rofi)
-- file manager: [nautilus-typeahead](https://apps.gnome.org/app/org.gnome.Nautilus/)
-- editor: [nvchad](https://nvchad.com/) + [lunarvim](https://www.lunarvim.org/)
-- terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
-- shell: [oh-my-zsh](https://ohmyz.sh/) + [p10k](https://github.com/romkatv/powerlevel10k) 
-- fetch: [neofetch](https://github.com/dylanaraps/neofetch) + nitch
-- browser: [firefox](https://www.mozilla.org/en-US/firefox/new/)
+- file manager: [Nemo](https://github.com/linuxmint/nemo) / [nautilus-typeahead](https://apps.gnome.org/app/org.gnome.Nautilus)
+- editor: [neovim](https://github.com/neovim/neovim) + [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+- terminal: [alacritty](https://github.com/alacritty/alacritty)
+- shell: [fish](https://github.com/fish-shell/fish-shell)
+- fetch: [fastfetch](https://github.com/fastfetch-cli/fastfetch) / [nitch](https://github.com/ssleert/nitch)
+- browser: [firefox](https://www.mozilla.org/en-US/firefox/new/) + Betterfox (user.js file)
 
 
 installation:
@@ -25,6 +25,6 @@ installation:
     and put all the files in your home folder
 2. install needed packages
 - arch:
-`yay -S hyprland xdg-portal-hyprland waybar-hyprland polkit-gnome dunst swww rofi-iboon-wayland kitty brightnessctl pamixer playerctl udiskie wl-clip-persist cliphist pavucontrol firefox gnome-system-monitor nautilus-typeahead wofi-emoji wofi-power-menu slurp grim exa`
+`yay -S hyprland xdg-portal-hyprland waybar-hyprland polkit-gnome dunst swww rofi-iboon-wayland alacritty brightnessctl pamixer playerctl udiskie wl-clip-persist cliphist pavucontrol firefox gnome-system-monitor nautilus-typeahead wofi-emoji wofi-power-menu slurp grim exa ttf-jetbrains-mono-nerd`
 - arch optional:
-`yay -S fd bat bottom gnome-text-editor gnome-weather gnome-calcuator neofetch nitch alacritty`
+`yay -S fd bat bottom gnome-text-editor gnome-weather gnome-calcuator neofetch nitch kitty`
