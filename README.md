@@ -6,17 +6,17 @@ Cozy, simple and productive :D
 infomations:
 - color scheme: [mainly tokyonight](https://github.com/folke/tokyonight.nvim) / [catppuccin](https://github.com/catppuccin/catppuccin) [and dracula to fill the gap](https://draculatheme.com/)
 - os: [arch](https://archlinux.org/)
-- wm: [hyprland](https://hyprland.org/)
+- wm: [hyprland](https://hyprland.org/) (sometimes i use [bspwm](https://github.com/baskerville/bspwm) and [gnome](https://www.gnome.org/))
 - status: [waybar-hyprland](https://github.com/Alexays/Waybar)
 - wallpaper: [swww](https://github.com/Horus645/swww)
 - notif: [dunst](https://github.com/dunst-project/dunst)
 - launcher: [rofi-iboon-wayland](https://github.com/lbonn/rofi)
-- file manager: [Nemo](https://github.com/linuxmint/nemo) / [nautilus-typeahead](https://apps.gnome.org/app/org.gnome.Nautilus)
+- file manager: [nautilus-typeahead](https://github.com/lubomir-brindza/nautilus-typeahead)
 - editor: [neovim](https://github.com/neovim/neovim) + [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - terminal: [alacritty](https://github.com/alacritty/alacritty)
-- shell: [fish](https://github.com/fish-shell/fish-shell)
+- shell: [zsh](https://www.zsh.org/) / [fish](https://github.com/fish-shell/fish-shell)
 - fetch: [fastfetch](https://github.com/fastfetch-cli/fastfetch) / [nitch](https://github.com/ssleert/nitch)
-- browser: [firefox](https://www.mozilla.org/en-US/firefox/new/) + Betterfox (user.js file)
+- browser: [firefox](https://www.mozilla.org/en-US/firefox/new/) + [Betterfox](https://github.com/yokoffing/Betterfox) (user.js file)
 
 
 installation:

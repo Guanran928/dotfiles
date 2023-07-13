@@ -1,3 +1,8 @@
+#
+# Zsh RC config
+# ~/.zshrc
+#
+
 # Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -12,7 +17,6 @@ setopt histignorealldups sharehistory
 HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/.zsh/.zsh_history
-
 
 # Completion system
 autoload -Uz compinit && compinit
@@ -56,6 +60,9 @@ alias setproxy="export https_proxy=http://127.0.0.1:7890; export http_proxy=http
 # alias removemoreorphan="pacman -Qqd | sudo pacman -Rsu -"
 # alias updatemirror="sudo reflector --country China --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 
+
+# Sources
+# source /usr/share/nvm/init-nvm.sh
 
 # Plugins
 source ~/.zsh/sudo/sudo.plugin.zsh

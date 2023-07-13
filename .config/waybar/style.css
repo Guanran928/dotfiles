@@ -3,27 +3,31 @@
  * ~/.config/waybar/style.css
  * based on https://gitlab.com/fazzi/dotfiles  
  * made for `waybar-hyprland`
- * yes i have no knowledge about css
+ * remember to download `JetBrainsMono Nerd Font` font,
+ * `sudo pacman -S ttf-jetbrains-mono-nerd` on Arch Linux
  *
+ * yes i have no knowledge about css
+ * why am i commenting everything
  */
 
 * {
-  font-family: JetBrainsMono Nerd Font Propo; /* set font, propo nerd font for centered icons, symbols nerd font does not work great */
-  font-weight: bold; /* set bold font */
-  font-size: 14px; /* set font size */
-  color: #c0caf5 /* set global text color */
+  font: bold 14px "JetBrainsMono Nerd Font Propo"; /* font weight, font size and font. propo nerd font for centered icons, symbols nerd font does not work great on bold text */
+  color: #c0caf5; /* text color */
 }
 
 window#waybar {
   background: transparent; /* main window transparent background */
 }
 
-tooltip { /* custom font stopped working for some reason...? */
+tooltip {
   background: #15161e; /* tooltip background */
   border: 2px solid #c0caf5; /* tooltip border size and color */
   border-radius: 5px; /* tooltip rounded corners */
 }
 
+/* *****************************
+ * modules (pills) section start
+ * *****************************/
 #custom-launcher,
 #gamemode,
 #window,
@@ -33,33 +37,17 @@ tooltip { /* custom font stopped working for some reason...? */
 #battery,
 #clock,
 #cava {
-  background: #15161e; /* pill background color */
-  margin: 10px 4px 4px 4px; /* empty spaces around pill */
+  background: #15161e; /* background color */
+  margin: 10px 4px 4px 4px; /* empty spaces around */
   padding: 4px 10px; /* extend pill size, vertical then horizontal */
-  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4); /* pill shadows */
-  border-radius: 5px; /* pill rounded corners */
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4); /* pill background shadows */
+  border-radius: 5px; /* rounded corners */
 }
 
-#workspaces {
-  padding: 0px; /* remove padding around workspace module */
-}
+/* extend empty space on both side of the bar,
+ * value from ~/.config/hypr/hyprland.conf
+ * gaps_out (8px) + border size (2px) = 10px */
 
-#workspaces button {
-  padding: 0px 4px; /* fit with pill padding, 0px for not haveing duped vertical padding, 4px to make a square (4px value from: ...#clock {padding >4px< 10px}) */
-  border: 2px solid transparent; /* required by active workspace top color */
-}
-
-#workspaces button.active {
-  background: #1e1e2e; /* active workspace background color */
-  border-top-color: #7aa2f7; /* active workspace top color */
-  color: #a6adc8; /* active workspace icon color */
-}
-
-#workspaces button:hover {
-  background: #11111b; /* hovered workspace color */
-}
-
-/* extend empty space on both side of the bar, value from ~/.config/hypr/hyprland.conf */
 #custom-launcher {
   margin-left: 10px;
 }
@@ -67,6 +55,33 @@ tooltip { /* custom font stopped working for some reason...? */
 #clock {
   margin-right: 10px;
 }
+
+
+#workspaces {
+  padding: 0px; /* remove padding around workspace module */
+}
+
+#workspaces button {
+  padding: 0px 4px; /* fit with pill padding, 0px for not haveing duped vertical padding, 4px to make a square (4px value from module padding: ...#clock {padding >>4px<< 10px}) */
+  border: 2px solid transparent; /* required by active workspace top color, or the bar will jitter */
+  transition-property: background-color, border-top-color; /* smooth transition for workspace module */
+  transition-duration: .1s;
+}
+
+#workspaces button.active {
+  /* active workspace */
+  background: #1e1e2e; /* background color */
+  border-top-color: #7aa2f7; /* top color */
+  color: #a6adc8; /* icon(text) color */
+}
+
+#workspaces button:hover {
+  background: #11111b; /* hovered workspace color */
+}
+
+/* ***************************
+ * modules (pills) section end
+ * ***************************/
 
 /*
 
