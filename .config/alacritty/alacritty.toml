@@ -1,0 +1,33 @@
+import = ["/home/guanranwang/.config/alacritty/tokyonight/tokyonight_night.toml"]
+
+[cursor]
+style = "beam"
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1"
+
+[font]
+size = 12
+
+[font.bold]
+family = "monospace"
+style = "Bold"
+
+[font.bold_italic]
+family = "monospace"
+style = "Bold Italic"
+
+[font.italic]
+family = "monospace"
+style = "Italic"
+
+[font.normal]
+family = "monospace"
+style = "SemiBold"
+
+[window.padding]
+x = 16
+y = 16
+
+[window]
+opacity = 0.92

@@ -1,0 +1,56 @@
+#!/bin/sh
+
+# Original script based on https://github.com/nwg-piotr/nwg-shell/blob/main/scripts/screenshot,
+# which is based on https://github.com/moverest/sway-interactive-screenshot
+
+SWAY=$(echo "$SWAYSOCK")
+HYPR=$(echo "$HYPRLAND_INSTANCE_SIGNATURE")
+if [[ -n "$SWAY" && -n "$HYPR" ]]; then
+    echo "This script only works on sway or Hyprland, terminating.";
+    exit 1
+fi
+
+list_geometry()
+{
+    swaymsg -t get_tree | jq -r '.. | try select(.'"$1"' and .pid) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)''"'
+}
+
+list_geometry_hypr()
+{
+    hyprctl -j activewindow | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])''"'
+}
+
+CHOICE=$1
+EDIT=$2
+DIR=${SCREENSHOT_DIR:=~/Pictures/Screenshots}
+
+mkdir -p "$DIR"
+
+if [[ -n "$SWAY" ]]; then
+    FOCUSED=$(list_geometry focused)
+    FILENAME="${DIR/#\~/$HOME}/$(date +'%Y-%m-%d-%H%M%S_sway_screenshot.png')"
+    case $CHOICE in
+        fullscreen) wayshot -f "$FILENAME" ;;
+        region)     wayshot -s "$(slurp)" -f "$FILENAME" ;;
+        focused)    wayshot -s "$FOCUSED" -f "$FILENAME" ;;
+        display)    wayshot -o "$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')" -f "$FILENAME" ;;
+    esac
+fi
+
+if [[ -n "$HYPR" ]]; then
+    FOCUSED=$(list_geometry_hypr)
+    FILENAME="${DIR/#\~/$HOME}/$(date +'%Y-%m-%d-%H%M%S_hypr_screenshot.png')"
+    case $CHOICE in
+        fullscreen) wayshot -f "$FILENAME" ;;
+        region)     wayshot -s "$(slurp)" -f "$FILENAME" ;;
+        focused)    wayshot -s "$FOCUSED" -f "$FILENAME" ;;
+        display)    wayshot -o "$(hyprctl -j monitors | jq -r '.[] | select(.focused) | .name')" "$FILENAME" ;;
+    esac
+fi
+
+wl-copy < "$FILENAME"
+notify-send "Screenshot" "File saved as <i>'$FILENAME'</i> and copied to the clipboard." -i "$FILENAME"
+
+if [[ "$EDIT" = "edit" ]]; then
+    swappy -f "$FILENAME"
+fi

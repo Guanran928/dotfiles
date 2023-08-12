@@ -1,18 +1,9 @@
-/*
- * Waybar config
- * ~/.config/waybar/config
- */
-
-
 {
   "layer": "top",
-  "modules-left": ["custom/launcher", "wlr/workspaces", "cava", "gamemode"],
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "cava", "gamemode"],
   "modules-center": ["hyprland/window"],
   "modules-right": ["tray", "pulseaudio", "battery", "clock"],
-  "custom/launcher": {
-    /* "format": " nixos", */
-    "format": " arch btw"
-  },
+  "custom/launcher": { "format": " arch btw" },
   "gamemode": {
     "format": "{glyph} {count}",
     "glyph": "󰊴",
@@ -24,7 +15,7 @@
     "tooltip": true,
     "tooltip-format": "Games running: {count}"
   },
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace e-1",
@@ -41,34 +32,11 @@
     },
     "sort-by-number": true
   },
-  "cava": {
-    "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
-    "framerate": 30,
-    "autosens": 1,
-    "sensitivity": 100,
-    "bars": 14,
-    "lower_cutoff_freq": 50,
-    "higher_cutoff_freq": 10000,
-    "method": "pulse",
-    "source": "auto",
-    "stereo": true,
-    "reverse": false,
-    "bar_delimiter": 0,
-    "monstercat": false,
-    "waves": false,
-    "noise_reduction": 0.77,
-    "input_delay": 2,
-    "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-    "actions": {
-      "on-click-right": "mode"
-      }
-  },
   "hyprland/window": {
     "format": "{}",
     "separate-outputs": true
   },
   "tray": {
-    "icon-size": 18,
     "spacing": 10
   },
   "pulseaudio": {

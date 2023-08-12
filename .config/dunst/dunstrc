@@ -12,12 +12,12 @@ indicate_hidden = no
 shrink = no
 separator_height = 4
 separator_color = yes
-padding = 20
-horizontal_padding = 20
+padding = 16
+horizontal_padding = 16
 frame_width = 2
 sort = no
 idle_threshold = 120
-font = Torus 13
+font = JetBrainsMono Nerd Font 10
 line_height = 4
 markup = full
 format = "<b>%s</b>\n%b"
@@ -51,40 +51,22 @@ history = ctrl+grave
 context = ctrl+shift+period
 
 # catppuccin, but didnt work well D:
-#[global]
-#frame_color = "#89B4FA"
-#separator_color= frame
-
-#[urgency_low]
-#timeout = 4
-#background = "#1E1E2E99"
-#foreground = "#CDD6F4"
-
-#[urgency_normal]
-#timeout = 8
-#background = "#1E1E2E99"
-#foreground = "#CDD6F4"
-
-#[urgency_critical]
-#timeout = 0
-#background = "#1E1E2E99"
-#foreground = "#CDD6F4"
-#frame_color = "#FAB387"
+[global]
+frame_color = "#89B4FA"
+separator_color= frame
 
 [urgency_low]
 timeout = 4
-background = "#1A1B2699"
-foreground = "#A4D7F1"
-frame_color = "#A4D7F1"
+background = "#1E1E2E99"
+foreground = "#CDD6F4"
 
 [urgency_normal]
 timeout = 8
-background = "#1A1B2699"
-foreground = "#A4D7F1"
-frame_color = "#A4D7F1"
+background = "#1E1E2E99"
+foreground = "#CDD6F4"
 
 [urgency_critical]
 timeout = 0
-background = "#1A1B2699"
-foreground = "#FDDC74"
-frame_color = "#FDDC74"
+background = "#1E1E2E99"
+foreground = "#CDD6F4"
+frame_color = "#FAB387"

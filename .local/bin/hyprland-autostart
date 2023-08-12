@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#
+# Script for Hyprland
+# ~/.local/share/bin/hyprland-cleanup
+#
+
+hyprctl keyword windowrule "workspace 1 silent, alacritty"
+hyprctl keyword windowrule "workspace 2 silent, firefox"
+/usr/bin/alacritty &
+/usr/bin/flatpak run com.google.Chrome &
+sleep 5
+hyprctl keyword windowrule "workspace unset, alacritty"
+hyprctl keyword windowrule "workspace unset, firefox"

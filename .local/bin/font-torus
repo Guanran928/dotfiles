@@ -1,3 +1,0 @@
-gsettings set org.gnome.desktop.interface font-name 'Torus'
-gsettings set org.gnome.desktop.interface document-font-name 'Torus'
-gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font'

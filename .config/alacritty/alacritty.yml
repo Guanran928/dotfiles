@@ -6,16 +6,16 @@
 font:
   size: 12
   normal:
-    family: JetBrainsMono Nerd Font
+    family: monospace
     style: SemiBold
   bold:
-    family: JetBrainsMono Nerd Font    
+    family: monospace
     style: Bold
   italic:
-    family: JetBrainsMono Nerd Font    
+    family: monospace
     style: Italic
   bold_italic:
-    family: JetBrainsMono Nerd Font    
+    family: monospace 
     style: Bold Italic
 
 window:
@@ -24,11 +24,12 @@ window:
     x: 16
     y: 16
     dynamic_padding: true
+
 cursor:
   style: beam
 
 env:
-  WINIT_X11_SCALE_FACTOR: "1"
+  WINIT_X11_SCALE_FACTOR: "1" # workaround for weird scaling bug on x11
 
 #shell:
     #program: /usr/bin/fish

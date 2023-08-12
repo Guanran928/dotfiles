@@ -1,8 +1,0 @@
-#
-# Script for Hyprland
-# ~/.local/share/bin/hyprland-cleanup
-#
-
-sleep 10
-hyprctl keyword windowrule "workspace unset, alacritty"
-hyprctl keyword windowrule "workspace unset, firefox"
