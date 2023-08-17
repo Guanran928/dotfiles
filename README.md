@@ -15,6 +15,6 @@ installation:
     and put all the files in your home folder
 2. install needed packages
 - arch (i use a 3rd party repo, so some packages might not be in aur):
-`yay -S hyprland-nvidia-git xdg-portal-hyprland-git xdg-portal-gtk waybar-git polkit-gnome dunst swww rofi-iboon-wayland alacritty brightnessctl pamixer playerctl udiskie wl-clip-persist cliphist pavucontrol firefox gnome-system-monitor nautilus-typeahead wofi-emoji wofi-power-menu slurp grim ttf-jetbrains-mono-nerd`
+`yay -S hyprland-nvidia-git xdg-portal-hyprland-git xdg-portal-gtk waybar-git polkit-gnome dunst swww rofi-iboon-wayland alacritty brightnessctl pamixer playerctl udiskie wl-clip-persist cliphist pavucontrol firefox gnome-system-monitor nautilus-typeahead rofi-emoji rofi-power-menu slurp grim ttf-jetbrains-mono-nerd`
 - shell config:
 `yay -S fd bat bottom exa`
