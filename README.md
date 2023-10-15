@@ -1,4 +1,5 @@
 # Guanran928's dotfiles
+## WARNING: This repo is currently abandoned, now I use Nix{,OS}+Home-Manager to manage my dotfiles instead of this repo... Please check out this [repo](https://github.com/Guanran928/flake).
 Cozy, simple and productive :D
 
 ![Screenshot, 06/09/2023](/assets/screenshot.jpg)
